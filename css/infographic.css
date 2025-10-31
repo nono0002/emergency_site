@@ -40,3 +40,41 @@
 .info-box:nth-of-type(2n) {
   background-color: var(--color-infobox-2-bg);
 }
+
+/* Hovers */
+
+/* Highlight-effekt på SVG-regioner */
+.active-region {
+  animation: pulseGlow 2s infinite;
+  filter: drop-shadow(0 0 10px rgba(255, 100, 0, 0.8));
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+@keyframes pulseGlow {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.6;
+    transform: scale(1.03);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Knapper */
+.info-graphic button {
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+  margin: 0.2rem;
+  padding: 0.4rem 0.8rem;
+}
+
+.info-graphic button.active {
+  background-color: #ffcc33;
+  transform: scale(1.05);
+}
