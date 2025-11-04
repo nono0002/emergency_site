@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="css/form.css" />
     <link rel="icon" type="image/png" href="img/fav.png" />
     <title>Emergency Site</title>
+    <link rel="stylesheet" href="css/register.css" />
   </head>
   <body id="register">
     <header>
@@ -40,7 +41,113 @@
           <h2>Overskrift</h2>
           <p>Tekst</p>
         </article>
-        <form id="webform"></form>
+        <form id="webform">
+          <fieldset>
+            <legend><h3>Indberet en ny katastrofe</h3></legend>
+
+            <label for="name">Dit navn (valgfrit):</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="F.eks. Jens Katastrofesen"
+            />
+
+            <label for="email">E-mail (valgfrit):</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="eksempel@mail.com"
+            />
+
+            <h4>Hvilken type katastrofe har du oplevet?</h4>
+            <label for="earthquake">
+              <input
+                type="checkbox"
+                id="earthquake"
+                name="catastrophe"
+                value="jordskælv"
+              />
+              Jordskælv
+            </label>
+            <label for="fridge">
+              <input
+                type="checkbox"
+                id="fridge"
+                name="catastrophe"
+                value="flyvende-køleskabe"
+              />
+              Flyvende køleskabe
+            </label>
+            <label for="spider">
+              <input
+                type="checkbox"
+                id="spider"
+                name="catastrophe"
+                value="gigantisk-edderkop"
+              />
+              Gigantisk edderkop
+            </label>
+            <label for="coffee">
+              <input
+                type="checkbox"
+                id="coffee"
+                name="catastrophe"
+                value="kaffemaskine-eksplosion"
+              />
+              Eksploderende kaffeautomater
+            </label>
+
+            <h4>Hvor alvorlig er situationen?</h4>
+            <label for="minor">
+              <input type="radio" id="minor" name="severity" value="mindre" />
+              Mindre
+            </label>
+            <label for="serious">
+              <input
+                type="radio"
+                id="serious"
+                name="severity"
+                value="alvorlig"
+              />
+              Alvorlig
+            </label>
+            <label for="end">
+              <input
+                type="radio"
+                id="end"
+                name="severity"
+                value="verdensende"
+              />
+              Verdensende
+            </label>
+
+            <label for="location">Hvor skete det?</label>
+            <select id="location" name="location">
+              <option value="">--Vælg et sted--</option>
+              <option value="europa">Europa</option>
+              <option value="sydamerika">Sydamerika</option>
+              <option value="antarktis">Antarktis</option>
+              <option value="ukendt">Ukendt</option>
+            </select>
+
+            <label for="date">Dato for hændelsen:</label>
+            <input type="date" id="date" name="date" />
+
+            <label for="details"
+              >Beskriv kort, hvad du har set eller hørt:</label
+            >
+            <textarea
+              id="details"
+              name="details"
+              rows="4"
+              placeholder="Skriv din katastroferapport her..."
+            ></textarea>
+
+            <button type="submit">Indsend rapport</button>
+          </fieldset>
+        </form>
       </section>
       <section id="form-summary">
         <h2>Summary</h2>

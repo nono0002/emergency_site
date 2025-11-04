@@ -1,0 +1,63 @@
+/* FORM STYLING */
+#webform {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 2rem;
+  background-color: var(--color-card-bg);
+  border-radius: var(--border-radius);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#webform fieldset {
+  border: 1px solid var(--color-menu-bg);
+  border-radius: var(--border-radius);
+  padding: 1.5rem;
+}
+
+#webform legend h3 {
+  color: var(--color-headline-text-page);
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+#webform label {
+  display: block;
+  margin-top: 0.5rem;
+  font-weight: 500;
+  color: var(--color-text);
+}
+
+#webform input,
+#webform select,
+#webform textarea {
+  width: 100%;
+  padding: 0.5rem;
+  margin-top: 0.3rem;
+  border: 1px solid #ccc;
+  border-radius: var(--border-radius);
+  font-family: var(--font-family-sans);
+  font-size: 1rem;
+}
+
+#webform input[type="checkbox"],
+#webform input[type="radio"] {
+  width: auto;
+  margin-right: 0.5rem;
+}
+
+#webform button {
+  margin-top: 1rem;
+  padding: 0.8rem 1.2rem;
+  background-color: var(--color-menu-bg);
+  color: white;
+  border: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  font-size: var(--form-submit-size);
+}
+
+#webform button:hover {
+  background-color: var(--color-cta-newscard-bg);
+  transition: 0.2s ease;
+}
