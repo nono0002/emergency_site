@@ -1,4 +1,4 @@
-/* FORM STYLING */
+/* === BASIC FORM STYLING === */
 #webform {
   display: flex;
   flex-direction: column;
@@ -10,29 +10,33 @@
 }
 
 #webform fieldset {
-  border: 1px solid var(--color-menu-bg);
+  border: 2px solid var(--color-cta-newscard-bg);
   border-radius: var(--border-radius);
   padding: 1.5rem;
 }
 
+/* legend / headline */
 #webform legend h3 {
   color: var(--color-headline-text-page);
   font-size: 1.2rem;
   margin-bottom: 1rem;
 }
 
-#webform label {
+/* labels and headings */
+#webform label,
+#webform h4 {
   display: block;
   margin-top: 0.5rem;
   font-weight: 500;
   color: var(--color-text);
 }
 
+/* inputs, selects, and textarea */
 #webform input,
 #webform select,
 #webform textarea {
   width: 100%;
-  padding: 0.5rem;
+  padding: 0.6rem;
   margin-top: 0.3rem;
   border: 1px solid #ccc;
   border-radius: var(--border-radius);
@@ -40,12 +44,19 @@
   font-size: 1rem;
 }
 
+/* checkboxes and radio buttons inline with text */
 #webform input[type="checkbox"],
 #webform input[type="radio"] {
   width: auto;
   margin-right: 0.5rem;
 }
 
+/* add vertical spacing between each label group */
+#webform h4 + label {
+  margin-top: 0.4rem;
+}
+
+/* button styling */
 #webform button {
   margin-top: 1rem;
   padding: 0.8rem 1.2rem;
