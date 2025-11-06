@@ -45,107 +45,138 @@
           <fieldset>
             <legend><h3>Indberet en ny katastrofe</h3></legend>
 
-            <label for="name">Dit navn (valgfrit):</label>
-            <input
-              type="text"
-              id="name"
-              name="name"
-              placeholder="F.eks. Jens Katastrofesen"
-            />
-
-            <label for="email">E-mail (valgfrit):</label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              placeholder="eksempel@mail.com"
-            />
-
-            <h4>Hvilken type katastrofe har du oplevet?</h4>
-            <label for="earthquake">
+            <!-- Navn -->
+            <div class="form-group">
+              <label for="name">Dit navn (valgfrit)</label>
               <input
-                type="checkbox"
-                id="earthquake"
-                name="catastrophe"
-                value="jordskælv"
+                type="text"
+                id="name"
+                name="name"
+                placeholder="F.eks. Jens Katastrofesen"
               />
-              Jordskælv
-            </label>
-            <label for="fridge">
-              <input
-                type="checkbox"
-                id="fridge"
-                name="catastrophe"
-                value="flyvende-køleskabe"
-              />
-              Flyvende køleskabe
-            </label>
-            <label for="spider">
-              <input
-                type="checkbox"
-                id="spider"
-                name="catastrophe"
-                value="gigantisk-edderkop"
-              />
-              Gigantisk edderkop
-            </label>
-            <label for="coffee">
-              <input
-                type="checkbox"
-                id="coffee"
-                name="catastrophe"
-                value="kaffemaskine-eksplosion"
-              />
-              Eksploderende kaffeautomater
-            </label>
+            </div>
 
-            <h4>Hvor alvorlig er situationen?</h4>
-            <label for="minor">
-              <input type="radio" id="minor" name="severity" value="mindre" />
-              Mindre
-            </label>
-            <label for="serious">
+            <!-- Email -->
+            <div class="form-group">
+              <label for="email">E-mail</label>
               <input
-                type="radio"
-                id="serious"
-                name="severity"
-                value="alvorlig"
+                type="email"
+                id="email"
+                name="email"
+                placeholder="eksempel@mail.com"
+                required
               />
-              Alvorlig
-            </label>
-            <label for="end">
+              <p class="error-message">Indtast venligst en gyldig e-mail.</p>
+            </div>
+
+            <!-- Katastrofetype -->
+            <div class="form-group">
+              <h4>Hvilken type katastrofe har du oplevet?</h4>
+
+              <label>
+                <input type="checkbox" name="katastrofe" value="jordskælv" />
+                Jordskælv
+              </label>
+
+              <label>
+                <input
+                  type="checkbox"
+                  name="katastrofe"
+                  value="flyvende-køleskabe"
+                />
+                Flyvende køleskabe
+              </label>
+
+              <label>
+                <input
+                  type="checkbox"
+                  name="katastrofe"
+                  value="gigantisk-edderkop"
+                />
+                Gigantisk edderkop
+              </label>
+
+              <label>
+                <input
+                  type="checkbox"
+                  name="katastrofe"
+                  value="kaffemaskine-eksplosion"
+                />
+                Eksploderende kaffeautomater
+              </label>
+
+              <label>
+                <input type="checkbox" name="katastrofe" value="andet" />
+                Andet
+              </label>
+
               <input
-                type="radio"
-                id="end"
-                name="severity"
-                value="verdensende"
+                type="text"
+                id="andet-beskrivelse"
+                name="andet-beskrivelse"
+                placeholder="Beskriv den usete katastrofe..."
               />
-              Verdensende
-            </label>
+            </div>
 
-            <label for="location">Hvor skete det?</label>
-            <select id="location" name="location">
-              <option value="">--Vælg et sted--</option>
-              <option value="europa">Europa</option>
-              <option value="sydamerika">Sydamerika</option>
-              <option value="antarktis">Antarktis</option>
-              <option value="ukendt">Ukendt</option>
-            </select>
+            <!-- Alvorlighed -->
+            <div class="form-group">
+              <h4>Hvor alvorlig er situationen?</h4>
+              <label>
+                <input type="radio" name="severity" value="mindre" required />
+                Mindre
+              </label>
+              <label>
+                <input type="radio" name="severity" value="alvorlig" />
+                Alvorlig
+              </label>
+              <label>
+                <input type="radio" name="severity" value="verdensende" />
+                Verdensende
+              </label>
+              <p class="error-message">Vælg venligst en kategori.</p>
+            </div>
 
-            <label for="date">Dato for hændelsen:</label>
-            <input type="date" id="date" name="date" />
+            <!-- Lokation -->
+            <div class="form-group">
+              <label for="location">Hvor skete det?</label>
+              <select id="location" name="location" required>
+                <option value="">--Vælg et sted--</option>
+                <option value="europa">Europa</option>
+                <option value="sydamerika">Sydamerika</option>
+                <option value="amerika">Amerika</option>
+                <option value="asien">Asien</option>
+                <option value="antarktis">Antarktis</option>
+                <option value="andet">Andet</option>
+              </select>
+              <p class="error-message">Vælg venligst en placering.</p>
+            </div>
 
-            <label for="details"
-              >Beskriv kort, hvad du har set eller hørt:</label
-            >
-            <textarea
-              id="details"
-              name="details"
-              rows="4"
-              placeholder="Skriv din katastroferapport her..."
-            ></textarea>
+            <!-- Dato -->
+            <div class="form-group">
+              <label for="date">Dato for hændelsen</label>
+              <input type="date" id="date" name="date" required />
+              <p class="error-message">Vælg en dato.</p>
+            </div>
 
-            <button type="submit">Indsend rapport</button>
+            <!-- Beskrivelse -->
+            <div class="form-group">
+              <label for="details"
+                >Beskriv kort, hvad du har set eller hørt</label
+              >
+              <textarea
+                id="details"
+                name="details"
+                rows="4"
+                placeholder="Skriv din katastroferapport her..."
+                required
+              ></textarea>
+              <p class="error-message">Skriv venligst en kort beskrivelse.</p>
+            </div>
+
+            <!-- Knap -->
+            <div class="form-group">
+              <button type="submit">Indsend rapport</button>
+            </div>
           </fieldset>
         </form>
       </section>
