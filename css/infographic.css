@@ -14,9 +14,10 @@
   line-height: 3rem;
   text-align: center;
   background-color: var(--color-headline-bg);
-  color: var(--color-headline-text-page);
+  color: var(--color-info-bg);
   margin-bottom: 1rem;
 }
+
 .info-text h3 {
   font-size: 0.8rem;
   line-height: 0.8rem;
@@ -79,4 +80,15 @@
   transform: scale(1.05);
 }
 
+.info-graphic_buttons {
+  text-align: center;
+  margin-top: 3rem;
+  display: flex;
+  justify-content: space-evenly;
+}
+
 /* gennemsigtighed */
+
+.info-graphic {
+  background: transparent;
+}
