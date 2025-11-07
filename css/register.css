@@ -72,3 +72,55 @@
   background-color: var(--color-cta-newscard-bg);
   transition: 0.2s ease;
 }
+
+/* === FORM SUMMARY STYLING === */
+#form-summary {
+  background-color: var(--color-card-bg);
+  border: 2px solid var(--color-cta-newscard-bg);
+  border-radius: var(--border-radius);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem 2rem;
+  margin-top: 2rem;
+}
+
+#form-summary h2 {
+  color: var(--color-headline-text-page);
+  text-align: center;
+  font-size: 1.4rem;
+  margin-bottom: 1.2rem;
+}
+
+#form-summary div {
+  display: grid;
+  gap: 0.6rem;
+  background-color: var(--color-news-bg-inverted);
+  border-radius: var(--border-radius);
+  padding: 1rem 1.2rem;
+}
+
+#form-summary p {
+  font-size: 1rem;
+  color: var(--color-text);
+  margin: 0;
+}
+
+#form-summary span {
+  font-weight: 600;
+  color: #000;
+}
+
+/* Subtle fade-in animation when the summary updates */
+#form-summary.show {
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
