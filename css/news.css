@@ -1,0 +1,139 @@
+/* === POPOVER STYLING === */
+.news-item[popover] {
+  position: relative;
+  display: grid;
+  gap: 1rem;
+  background-color: var(--color-card-bg);
+  border-radius: var(--border-radius);
+  padding: 2rem;
+  max-width: 800px;
+  width: 90%;
+  margin: 5vh auto;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  font-family: var(--font-family-sans);
+  color: var(--color-text);
+  transition: opacity 0.3s ease;
+}
+
+/* Baggrund, når popover er åbent */
+.news-item[popover]:popover-open {
+  opacity: 1;
+  z-index: 100;
+}
+
+/* Global dimming baggrund (automatisk fra popover) */
+::backdrop {
+  background-color: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(3px);
+}
+
+/* Header inde i popover */
+.news-item .news-header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 0.5rem;
+}
+
+.news-item .news-title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin: 0;
+  color: var(--color-headline-text-page);
+}
+
+.news-item .news-date {
+  font-size: 0.9rem;
+  color: #777;
+}
+
+/* Indhold (tekst + billede) */
+.news-item .news-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  line-height: 1.6;
+}
+
+.news-item .news-content img.news-img {
+  width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+  border-radius: var(--border-radius);
+}
+
+/* Luk-knap i øverste hjørne (frivillig) */
+.news-item::after {
+  content: "✕";
+  position: absolute;
+  top: 0.7rem;
+  right: 0.9rem;
+  font-size: 1.3rem;
+  color: #555;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.news-item::after:hover {
+  color: var(--color-cta-newscard-bg);
+}
+
+/* nr 2 chat */
+
+/* === POPOVER STYLING (sticky viewport-center) === */
+.news-item[popover] {
+  position: fixed; /* ændret fra relative */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2000;
+
+  display: grid;
+  gap: 1rem;
+  background-color: var(--color-card-bg);
+  border-radius: var(--border-radius);
+  padding: 2rem;
+  max-width: 800px;
+  width: 90%;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+  font-family: var(--font-family-sans);
+  color: var(--color-text);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  opacity: 0;
+}
+
+/* Når popover er aktiv */
+.news-item[popover]:popover-open {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+/* Slør baggrund ved åben popover */
+::backdrop {
+  background-color: rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(3px);
+}
+
+/* Scroll i selve popover hvis indhold er langt */
+.news-item .news-content {
+  max-height: 70vh;
+  overflow-y: auto;
+  padding-right: 0.3rem;
+}
+
+/* Luk-knap */
+.news-item::after {
+  content: "✕";
+  position: absolute;
+  top: 0.7rem;
+  right: 0.9rem;
+  font-size: 1.4rem;
+  color: #666;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.news-item::after:hover {
+  color: var(--color-cta-newscard-bg);
+}

@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="css/burger.css" />
     <link rel="stylesheet" href="css/cards.css" />
     <link rel="icon" type="image/png" href="img/fav.png" />
+    <link rel="stylesheet" href="css/news.css" />
     <title>Emergency Site</title>
   </head>
   <body id="frontpage">
@@ -66,23 +67,42 @@
         </article>
       </section>
       <section id="breaking">
-        <article class="news_card">
-          <h3>Nyhed</h3>
-          <p>Lorem ipsum dolor sit, sed minima asperiores.</p>
-          <img src="" alt="news_img" />
-          <a class="cta_btn" href="">Læs mere</a>
+        <article class="news_card" id="news_coffee">
+          <h3>Global Kaffestorm rammer kontinentale systemer</h3>
+          <p>
+            Et lavtryk har udløst en verdensomspændende regn af kaffe, der
+            kortvarigt fik produktiviteten til at eksplodere.
+          </p>
+          <img
+            src="img/kaffe-storm.png"
+            alt="Illustration af global kaffestorm"
+          />
+          <button class="cta_btn" popovertarget="coffee_pop">Læs mere</button>
         </article>
-        <article class="news_card">
-          <h3>Nyhed</h3>
-          <p>Lorem ipsum dolor sit, sed minima asperiores.</p>
-          <img src="" alt="news_img" />
-          <a class="cta_btn" href="">Læs mere</a>
+        <article class="news_card" id="news_moon">
+          <h3>Magnetisk Måneskælv forstyrrer tidevand og humør</h3>
+          <p>
+            Et sjældent magnetisk udbrud fra månen har ændret tidevandet og
+            gjort alle lidt mere følelsesmæssigt ladede.
+          </p>
+          <img
+            src="img/magnetic-moon.png"
+            alt="Illustration af magnetisk måneskælv"
+          />
+          <button class="cta_btn" popovertarget="moon_pop">Læs mere</button>
         </article>
-        <article class="news_card">
-          <h3>Nyhed</h3>
-          <p>Lorem ipsum dolor sit, sed minima asperiores.</p>
-          <img src="" alt="news_img" />
-          <a class="cta_btn" href="">Læs mere</a>
+
+        <article class="news_card" id="news_plastic">
+          <h3>Plastiksne dækker byer verden over</h3>
+          <p>
+            Et globalt vejrskifte har udløst farverig plastiksne, der lammer
+            trafikken og fascinerer turisterne.
+          </p>
+          <img
+            src="img/plastic-snowstorm.png"
+            alt="Illustration af plastiksne over byen"
+          />
+          <button class="cta_btn" popovertarget="plastic_pop">Læs mere</button>
         </article>
       </section>
     </main>
@@ -112,6 +132,73 @@
           <li><a href="">link</a></li>
         </ul>
       </nav>
+      <article popover id="coffee_pop" class="news-item">
+        <div class="news-header">
+          <h3 class="news-title">
+            Global Kaffestorm forårsager midlertidig produktivitet
+          </h3>
+          <span class="news-date">12. november, 09:42</span>
+        </div>
+        <div class="news-content">
+          <img
+            src="img/kaffe-storm.png"
+            alt="Illustration af global kaffestorm"
+            class="news-img"
+          />
+          <p>
+            Et usædvanligt lavtryk har resulteret i en verdensomspændende regn
+            af kaffe, der i flere timer fik befolkningen til at arbejde
+            hurtigere end nogensinde. Myndighederne advarer dog om alvorlige
+            bivirkninger som overophedede tastaturer og spontan eufori. Systemet
+            forsøger stadig at tørre skærmene.
+          </p>
+        </div>
+      </article>
+
+      <article popover id="moon_pop" class="news-item">
+        <div class="news-header">
+          <h3 class="news-title">
+            Magnetisk Måneskælv forstyrrer tidevand og humør
+          </h3>
+          <span class="news-date">13. november, 06:17</span>
+        </div>
+        <div class="news-content">
+          <img
+            src="img/magnetic-moon.png"
+            alt="Illustration af magnetisk måneskælv"
+            class="news-img"
+          />
+          <p>
+            Jordens måne har i nat udsendt et magnetisk chok, der har fået
+            tidevandet til at skifte retning og enkelte borgere til spontant at
+            føle sig både nostalgiske og opladede på samme tid. Eksperter
+            beskriver fænomenet som “emosionelt nordlys”.
+          </p>
+        </div>
+      </article>
+
+      <article popover id="plastic_pop" class="news-item">
+        <div class="news-header">
+          <h3 class="news-title">
+            Verdensomspændende sne af plastikperler lammer trafikken
+          </h3>
+          <span class="news-date">14. november, 15:03</span>
+        </div>
+        <div class="news-content">
+          <img
+            src="img/plastic-snowstorm.png"
+            alt="Illustration af plastik-sne over byen"
+            class="news-img"
+          />
+          <p>
+            Et globalt vejrskifte har fået atmosfæren til at udskille milliarder
+            af små, farvede plastikperler, der nu dækker byer verden over.
+            Regeringer beskriver situationen som "æstetisk problematisk, men
+            visuelt tiltalende." Myndighederne advarer mod at forsøge at rydde
+            op – det får kun sneen til at multiplicere.
+          </p>
+        </div>
+      </article>
     </footer>
     <script src="js/burger.js"></script>
     <!-- <script src="js/main.js"></script> -->
