@@ -21,6 +21,11 @@
   z-index: 100;
 }
 
+/* Hide popovers when not open */
+.news-item[popover]:not(:popover-open) {
+  display: none;
+}
+
 /* Global dimming baggrund (automatisk fra popover) */
 ::backdrop {
   background-color: rgba(0, 0, 0, 0.4);
