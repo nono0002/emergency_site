@@ -14,7 +14,7 @@
 }
 .daily_text h2 {
   background-color: var(--color-headline-bg);
-  color: var(--color-text-inverted);
+  color: var(--color-headline-text-page);
   padding: calc(1.1rem / 1.5) 0 calc(1.1rem / 2) 1rem;
   margin: 0 0 0.5rem 0;
 }

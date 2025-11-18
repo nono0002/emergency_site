@@ -14,7 +14,7 @@
   line-height: 3rem;
   text-align: center;
   background-color: var(--color-headline-bg);
-  color: var(--color-info-bg);
+  color: var(--color-headline-text-page);
   margin-bottom: 1rem;
 }
 
