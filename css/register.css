@@ -10,16 +10,18 @@
 }
 
 #webform fieldset {
-  border: 2px solid var(--color-cta-newscard-bg);
+  border: 2px solid var(--color-cta-card-bg); /* terracotta ramme */
   border-radius: var(--border-radius);
   padding: 1.5rem;
 }
 
 /* legend / headline */
 #webform legend h3 {
-  color: var(--color-headline-text-page);
+  color: var(--color-form-headline); /* varm terracotta fra custom.css */
   font-size: 1.2rem;
   margin-bottom: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
 }
 
 /* labels and headings */
@@ -69,14 +71,14 @@
 }
 
 #webform button:hover {
-  background-color: var(--color-cta-newscard-bg);
+  background-color: var(--color-cta-card-bg); /* terracotta ved hover */
   transition: 0.2s ease;
 }
 
 /* === FORM SUMMARY STYLING === */
 #form-summary {
   background-color: var(--color-card-bg);
-  border: 2px solid var(--color-cta-newscard-bg);
+  border: 2px solid var(--color-cta-card-bg);
   border-radius: var(--border-radius);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   padding: 1.5rem 2rem;
@@ -84,7 +86,7 @@
 }
 
 #form-summary h2 {
-  color: var(--color-headline-text-page);
+  color: var(--color-form-headline);
   text-align: center;
   font-size: 1.4rem;
   margin-bottom: 1.2rem;
