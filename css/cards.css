@@ -2,10 +2,11 @@
   background-color: var(--color-card-bg);
   display: grid;
   grid-template-columns: 3fr 5fr;
-  gap: 10px;
-  padding: 40px 0 40px 20px;
+  gap: 1.2rem;
+  padding: 20px 20px 20px 20px;
   border-radius: var(--border-radius);
   height: minmax(200px, min-content);
+  box-shadow: 0 2px 6px rgba(0, 0, 0.2, 0.2);
 }
 .daily_text {
   display: grid;
@@ -17,6 +18,7 @@
   color: var(--color-headline-text-page);
   padding: calc(1.1rem / 1.5) 0 calc(1.1rem / 2) 1rem;
   margin: 0 0 0.5rem 0;
+  border-radius: 4px;
 }
 .daily_text p {
   padding-right: 2rem;
@@ -31,20 +33,26 @@
   height: 100%;
   object-fit: cover;
 }
+
+.daily_card:hover {
+  background-color: rgba(240, 241, 246, 0.9);
+  transition: background-color 0.25s ease;
+}
+
 .news_card {
   background-color: var(--color-news-bg);
   display: grid;
   grid-template-rows: repeat(min-content);
   gap: 0.4rem;
-  padding: 1rem 0;
+  padding: 1.2rem;
   height: minmax(300px, min-content);
 }
 .news_card:nth-child(2n) {
   background-color: var(--color-news-bg-inverted);
 }
-.news_card > * {
+/* .news_card > * {
   padding: 0 1rem;
-}
+} */
 .news_card h3 {
   margin: 0.5rem 0 0 0;
 }
@@ -60,6 +68,7 @@
   text-align: center;
   line-height: 1rem;
   padding: calc(1.1rem / 1.5) 0 calc(1.1rem / 2) 0;
+  border-radius: 4px;
 }
 .news_card:first-child {
   border-radius: var(--border-radius) var(--border-radius) 0 0;
@@ -79,7 +88,49 @@
   text-decoration: none;
   width: max-content;
   border-radius: var(--border-radius);
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  transition: 0.2s ease;
 }
+
+/* fjerner blå border*/
+summary.cta_btn {
+  outline: none;
+}
+summary.cta_btn:focus {
+  outline: none;
+}
+/* ------ */
+
+/* andet */
+.mereInfo .content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s ease, opacity 0.3s ease;
+  opacity: 0;
+}
+
+.mereInfo[open] .content {
+  max-height: 200px; /* adjust depending on content */
+  opacity: 1;
+}
+
+.mereInfo .content p {
+  margin: 1rem 0 1.2rem 0;
+}
+
+summary.cta_btn:hover {
+  filter: brightness(1.1);
+  cursor: pointer;
+}
+
+/* --- */
+
+.cta_btn:hover {
+  filter: brightness(1.1);
+  transform: translateY(-1px);
+}
+
 .news_card .cta_btn {
   background-color: var(--color-cta-newscard-bg);
 }

@@ -108,7 +108,7 @@
 
 #form-summary span {
   font-weight: 600;
-  color: #000;
+  color: var(--color-text);
 }
 
 /* Subtle fade-in animation when the summary updates */
@@ -125,4 +125,38 @@
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+#form-info {
+  background-color: transparent; /* Lys neutral baggrund */
+  border-left: 4px solid #d46a2e; /* Orange markering */
+  padding: 20px;
+  margin-bottom: 30px;
+  border-radius: 4px;
+}
+
+#form-info h2 {
+  margin-bottom: 10px;
+  font-size: 1.4rem;
+  color: var(--color-text);
+}
+
+#form-info p {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--color-text);
+}
+
+/* adjustments */
+
+/* Gør summary-panelet kompakt i højden */
+#form-summary {
+  max-height: fit-content;
+  height: auto;
+  display: block;
+}
+
+/* Sørg for at det ikke strækkes af layoutet */
+#form-section {
+  align-items: flex-start;
 }
