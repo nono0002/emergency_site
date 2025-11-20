@@ -25,8 +25,46 @@ header {
 
 #main-disclamer-content {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
   column-gap: 1rem;
 }
+
+#main-disclamer-content img {
+  width: 200px;
+  height: 200px;
+  object-fit: contain;
+}
+
+/* Overskrift og rubrik... */
+
+#main-disclamer-content h1,
+#register h1,
+#instruction h1 {
+  font-size: 1.6rem; /* gør den tydeligt større end resten */
+  font-weight: 700; /* tydelig, men ikke alt for tung */
+  letter-spacing: 0.08em; /* lidt spacing = mere “system/overblik” */
+  text-transform: uppercase; /* matcher dit lidt autoritative univers */
+  margin: 0 0 0.2rem 0;
+  color: #f6f4ec; /* lysere end normal tekst – tæt på dit logo-lys */
+}
+
+#register h1,
+#instruction h1 {
+  font-size: 1.4rem;
+}
+
+#main-disclamer-content .sub {
+  font-size: 0.95rem;
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  text-transform: none; /* må gerne være mere “sætning” */
+  margin: 0;
+  color: #d0cfc7; /* lidt svagere tone end h1 */
+  opacity: 0.9;
+}
+
+/* --------- */
 
 main section {
   padding: 20px;
@@ -96,11 +134,14 @@ nav a {
 
 /* Måske skal du lave en ny regel for logotype-wrapper, når du har lavet din logotype */
 #logotype-wrapper {
-  background-color: var(--color-logotype-bg);
-  display: flex;
   justify-content: flex-start;
-  align-items: center;
   height: 3.6rem;
+
+  background-color: var(--color-logotype-bg); /* mørk “plade” bag logoet */
+  padding: 0.3rem 1.2rem;
+  border-radius: 2px;
+  display: flex;
+  align-items: center;
 }
 
 #logotype-wrapper > a {
@@ -109,6 +150,21 @@ nav a {
   font-weight: var(--font-weight-medium);
   width: max-content;
   margin-left: 1rem;
+
+  letter-spacing: 0.19em;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+#logotype-wrapper {
+  transition: background-color 0.25s ease, transform 0.2s ease;
+}
+
+#logotype-wrapper:hover {
+  background-color: #343434; /* en lille tone lysere end din mørke plade */
+  transform: translateY(-2px);
 }
 
 /* Global menu */
@@ -138,4 +194,47 @@ nav a:active {
 /* FOOTER */
 footer a {
   font-size: 0.7rem;
+}
+
+#anomaly-footer {
+  margin-top: 4rem;
+  padding: 1.5rem 0;
+  text-align: center;
+  background-color: var(--color-head-bg);
+  color: var(--color-text-inverted);
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+/* Spøjs lille “system status” prik */
+#anomaly-footer .pulse {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  margin-left: 6px;
+  background-color: #ff9b00;
+  border-radius: 50%;
+  animation: pulse 1.6s infinite ease-in-out;
+}
+
+/* Den lille blinkende effekt */
+@keyframes pulse {
+  0% {
+    opacity: 0.2;
+    transform: scale(0.9);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0.3;
+    transform: scale(0.8);
+  }
+}
+
+/* Secondary text */
+#anomaly-footer .disclaimer {
+  margin-top: 0.5rem;
+  opacity: 0.6;
 }

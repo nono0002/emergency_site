@@ -30,6 +30,7 @@ function handleSubmit(event) {
   // Get all selected katastrofer (can be multiple checkboxes)
   const katastrofer = formData.getAll("katastrofe");
   let katastrofeText = katastrofer.join(", ");
+
   // If "andet" is checked and user wrote something
   const andetBeskrivelse = formData.get("andet-beskrivelse");
   if (andetBeskrivelse) {
@@ -59,6 +60,11 @@ function handleSubmit(event) {
   hvorOutput.textContent = hvor;
   datoOutput.textContent = dato;
   beskrivelseOutput.textContent = beskrivelse;
+
+  // CMD + 7: scroll to summary panel
+  document.querySelector("#form-summary").scrollIntoView({
+    behavior: "smooth",
+  });
 
   // Reset form after submit
   form.reset();
